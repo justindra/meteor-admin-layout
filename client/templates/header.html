@@ -1,3 +1,41 @@
 <template name="adminHeader">
-This is the header
+	<header class="header">
+		<div class="brand">
+		    <a href="{{pathFor 'adminHome'}}" class="logo">
+		        {{#if brandLogo}}<img src="{{brandLogo}}" alt="">{{/if}}{{brandName}}
+		    </a>
+		    <div class="sidebar-toggle-box">
+		        <div class="fa fa-bars"></div>
+		    </div>
+		</div>
+		<div class="top-nav">
+		    <!--search & user info start-->
+		    <ul class="nav pull-right top-menu">
+		        <!-- user login dropdown start-->
+		        {{#if currentUser}}
+		        <li class="dropdown">
+		            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+		                <img alt="" src="{{currentUser.profile.avatar.url}}">
+		                <span class="username">{{currentUser.username}}</span>
+		                <b class="caret"></b>
+		            </a>
+		            <ul class="dropdown-menu extended logout">
+		                <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+		                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+		                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+		            </ul>
+		        </li>
+		        {{/if}}
+		        <!-- user login dropdown end -->
+		        {{#if showRightSidebar}}
+		        <li>
+		            <div class="toggle-right-box">
+		                <div class="fa fa-bars"></div>
+		            </div>
+		        </li>
+		        {{/if}}
+		    </ul>
+		    <!--search & user info end-->
+		</div>
+	</header>
 </template>

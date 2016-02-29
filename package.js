@@ -13,13 +13,22 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('ecmascript');
-  api.use('templating', 'client');
+  api.use([
+      'templating',
+      'less@1.0.0 || 2.5.0'
+    ], 'client');
   api.addFiles('justindra-admin-layout.js');
   api.addFiles([
+      'client/stylesheets/configs.import.less',
+      'client/stylesheets/header.import.less',
+      'client/stylesheets/main.less',
       'client/templates/sidebar.html',
       'client/templates/header.html',
+      'client/templates/header.js',
       'client/templates/body.html'
     ], 'client');
+
+  api.export(['AdminLayoutConfig'], 'client');
 });
 
 Package.onTest(function(api) {
