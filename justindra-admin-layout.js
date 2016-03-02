@@ -1,9 +1,10 @@
 if (typeof AdminLayoutConfig === 'undefined') { AdminLayoutConfig = {}; }
 if (typeof AdminLayout === 'undefined') { AdminLayout = {}; }
 
-Meteor.startup(function () {
+AdminLayoutConfig['config'] = function (config) {
 	AdminLayout['data'] = {
-		brandName: AdminLayoutConfig.brandName || 'brand name',
-		showRightSidebar: AdminLayoutConfig.brandName || true
+		brandName: config.brandName || 'brand name',
+		brandLogo: config.brandLogo || false,
+		showRightSidebar: config.brandName || true
 	}
-});
+}

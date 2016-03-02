@@ -25,7 +25,8 @@ Package.onUse(function(api) {
       'client/templates/sidebar.html',
       'client/templates/header.html',
       'client/templates/header.js',
-      'client/templates/body.html'
+      'client/templates/body.html',
+      'client/templates/body.js'
     ], 'client');
 
   api.export(['AdminLayoutConfig'], 'client');
