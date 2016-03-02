@@ -1,3 +1,27 @@
 <template name="adminSidebar">
-	This is the sidebar
+	<aside>
+	    <div id="sidebar" class="nav-collapse">
+	        <!-- sidebar menu start-->
+	        <div class="leftside-navigation">
+	            <ul class="sidebar-menu" id="nav-accordion">
+	            	{{#each link in sidebarLinks}}
+		            	<li class="{{#if link.subroutes}}sub-menu{{/if}}">
+		                    <a href="{{#if link.routeName}}{{pathFor link.routeName}}{{else}}#{{/if}}">
+		                        <i class="fa {{link.icon}}"></i>
+		                        <span>{{link.label}}</span>
+		                    </a>
+		                    {{#if link.subroutes}}
+		                    <ul class="sub">
+		                    	{{#each sublink in link.subroutes}}
+			                        <li><a href="{{pathFor sublink.routeName}}">{{sublink.label}}</a></li>
+		                        {{/each}}
+		                    </ul>
+		                    {{/if}}
+		                </li>
+	            	{{/each}}
+	            </ul>
+            </div>
+	        <!-- sidebar menu end-->
+	    </div>
+	</aside>
 </template>

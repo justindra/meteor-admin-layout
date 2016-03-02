@@ -5,6 +5,7 @@ AdminLayoutConfig['config'] = function (config) {
 	AdminLayout['data'] = {
 		brandName: config.brandName || 'brand name',
 		brandLogo: config.brandLogo || false,
-		showRightSidebar: config.brandName || true
+		showRightSidebar: config.brandName || true,
+		sidebarLinks: config.sidebarLinks || []
 	}
 }

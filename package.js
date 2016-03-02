@@ -15,16 +15,19 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.use([
       'templating',
-      'less@1.0.0 || 2.5.0'
+      'less@1.0.0 || 2.5.0',
+      'keryi:meteor-dcaccordion'
     ], 'client');
   api.addFiles('justindra-admin-layout.js');
   api.addFiles([
       'client/stylesheets/configs.import.less',
-      'client/stylesheets/header.import.less',
       'client/stylesheets/main.less',
       'client/templates/sidebar.html',
+      'client/templates/sidebar.js',
+      'client/stylesheets/sidebar.import.less',
       'client/templates/header.html',
       'client/templates/header.js',
+      'client/stylesheets/header.import.less',
       'client/templates/body.html',
       'client/templates/body.js'
     ], 'client');
