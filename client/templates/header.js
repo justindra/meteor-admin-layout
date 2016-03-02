@@ -9,3 +9,9 @@ Template.adminHeader.helpers({
 		return AdminLayout.data.showRightSidebar;
 	}
 });
+
+Template.adminHeader.events({
+	'click .sidebar-toggle-box': function (evt, template) {
+		$('body').toggleClass('sidebar-closed');
+	}
+});

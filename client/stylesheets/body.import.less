@@ -1,0 +1,27 @@
+#main-content {
+    margin-left: @sidebar-width;
+    -webkit-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
+    background: @accent-3-color;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .wrapper {
+	    display:inline-block;
+	    margin-top: @header-height;
+	    padding:15px;
+	    width:100%;
+	}
+}
+
+.sidebar-closed {
+	#main-content {
+		margin-left: 0;
+	}
+}
