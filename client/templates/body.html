@@ -1,11 +1,14 @@
 <template name="adminBody">
-	{{>adminHeader}}
-	{{>adminSidebar}}
+	{{#if currentUser}}
+		{{>adminHeader}}
+		{{>adminSidebar}}
 
-    <section id="main-content">
-        <section class="wrapper">
-	        <!-- {{> Template.dynamic template=content}} -->
-	        Hello, bro
-        </section>
-    </section>
+	    <section id="main-content">
+	        <section class="wrapper">
+		        {{> Template.dynamic template=content}}
+	        </section>
+	    </section>
+	{{else}}
+		{{>login}}
+    {{/if}}
 </template>

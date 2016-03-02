@@ -30,7 +30,10 @@ Package.onUse(function(api) {
       'client/stylesheets/header.import.less',
       'client/templates/body.html',
       'client/templates/body.js',
-      'client/stylesheets/body.import.less'
+      'client/stylesheets/body.import.less',
+      'client/templates/login.html',
+      'client/templates/login.js',
+      'client/stylesheets/login.import.less'
     ], 'client');
 
   api.export(['AdminLayoutConfig'], 'client');
