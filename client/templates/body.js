@@ -5,3 +5,12 @@ Template.adminBody.events({
 		Meteor.logout();
 	}
 });
+
+Template.adminBody.onCreated(function () {
+	var instance = this;
+
+	var subscriptionsRequired = AdminLayout.data.adminSubscriptions;
+	_.each(subscriptionsRequired, function (subs) {
+		instance.subscribe(subs);
+	});
+});
