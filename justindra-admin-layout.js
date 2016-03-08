@@ -7,6 +7,7 @@ AdminLayoutConfig['config'] = function (config) {
 		brandLogo: config.brandLogo || false,
 		showRightSidebar: config.brandName || true,
 		sidebarLinks: config.sidebarLinks || [],
-		adminSubscriptions: config.adminSubscriptions || []
+		adminSubscriptions: config.adminSubscriptions || [],
+		breadcrumb: config.breadcrumb || true
 	}
 }
