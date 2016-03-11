@@ -16,7 +16,7 @@ Package.onUse(function(api) {
   api.use([
       'templating',
       'less@1.0.0 || 2.5.0',
-      'keryi:meteor-dcaccordion'
+      'keryi:meteor-dcaccordion@1.0.3'
     ], 'client');
   api.addFiles('justindra-admin-layout.js');
   api.addFiles([
@@ -42,6 +42,6 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
-  api.use('justindra-admin-layout');
+  api.use('justindra:admin-layout');
   api.addFiles('justindra-admin-layout-tests.js');
 });
